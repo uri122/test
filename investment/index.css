@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Roboto:wght@300&display=swap');
+
+:root {
+  margin: 0;
+  padding: 0;
+  --bg-color: #e4faf4;
+  --h1-color: #222222;
+  --text-color: #555555;
+  --btn-color: #00d09c;
+
+  /* font size */
+  --font-size-h1: 40px;
+  --font-size-h2: 30px;
+  --font-size-h3: 17px;
+  --font-size-txt: 14px;
+  --font-size-small: 13px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  /* letter-spacing: -0.05pc; */
+}
+
+.wrap {
+  max-width: 1140px;
+  min-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+a {
+  text-decoration: none;
+  color: #222222;
+}
+
+p {
+  color: #555555;
+}
+
+li {
+  list-style: none;
+}
+
+input,
+select {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+select,
+.link-btn {
+  cursor: pointer;
+}
+
+.bg-color {
+  background-color: #e4faf4;
+}
+
+h1,
+.underline {
+  font-family: 'Josefin Sans', sans-serif;
+}
+/*           퀵메뉴          */
+#quick-menu {
+  height: 30px;
+  line-height: 30px;
+  font-size: 13px;
+  color: #222222;
+  text-align: right;
+}
+
+#quick-menu span {
+  padding-left: 8px;
+}
+
+#app span > svg {
+  vertical-align: -2px;
+}
+
+/*        헤더          */
+#header {
+  display: flex;
+  height: 110px;
+  justify-content: space-between;
+  align-items: center;
+}
+form {
+  display: flex;
+  align-items: center;
+  width: 220px;
+  height: 42px;
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+}
+.search-input-field {
+  margin-left: 5px;
+  padding-left: 5px;
+  width: 160px;
+  font-size: 13px;
+  color: #555555;
+}
+
+.header-right,
+nav > ul {
+  display: flex;
+  align-items: center;
+}
+
+nav > ul > li {
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+/*            섹션01            */
+#section01 {
+  height: 580px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#section01-txt {
+  width: 455px;
+  padding-bottom: 40px;
+  line-height: 2em;
+  font-size: 17px;
+}
+#section01-txt > h1,
+#section01-txt > p,
+#section01-txt > button {
+  margin: 1.2em 0;
+}
+.underline {
+  box-shadow: inset 0 -12px #b1f0e0;
+}
+.link-btn {
+  border: 0;
+  padding: 10px 40px;
+  font-family: 'roboto';
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  border-radius: 4px;
+  background-color: #00d09c;
+}
+/* .link-btn:visited {
+  border: 0;
+  border-style: none;
+} */
+
+.link-btn:hover {
+  border: 0;
+  background-color: #1bc79c;
+}
+
+/* .link-btn:active {
+  border-style: none;
+} */
+
+/*            섹션02            */
+#section02 {
+  height: 190px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#section02-txt {
+  width: 500px;
+}
+#section02-txt > p {
+  position: relative;
+  top: 1em;
+  line-height: 2em;
+}
+.partners {
+  display: flex;
+  justify-content: space-around;
+}
+.partners li {
+  list-style: none;
+  width: 110px;
+  height: 110px;
+  margin-left: 3em;
+  padding: 1em;
+  border: #cdf6eb 1px solid;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #555555;
+}
+
+/*            섹션03            */
+#section03 {
+  height: 790px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#section03-txt {
+  width: 500px;
+  line-height: 2em;
+}
+#section03-list li {
+  list-style-image: url('img/section03_check.svg');
+  color: #555555;
+}
+
+/*            섹션04             */
+.section04 {
+  background: linear-gradient(#e4faf4, #fff);
+}
+#section04 {
+  height: 850px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#section04-txt {
+  width: 570px;
+  line-height: 2em;
+}
+#section04-subtxt {
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#section04-subtxt div {
+  width: 250px;
+}
+
+#section04-subtxt > .link-btn {
+  vertical-align: text-bottom;
+}
+
+/*            섹션05            */
+
+#section05 {
+  height: 300px;
+  text-align: center;
+  line-height: 4em;
+}
+
+footer {
+  border-top: 1px solid #e8e8e8;
+}
+#footer {
+  height: 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #555555;
+}
+.footer-sns {
+  display: flex;
+}
+.footer-sns li {
+  padding-left: 20px;
+}
+
+#hamberger-btn {
+  visibility: hidden;
+}
