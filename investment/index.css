@@ -21,14 +21,13 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  /* letter-spacing: -0.05pc; */
 }
 
 .wrap {
-  max-width: 1140px;
+  max-width: 1160px;
   min-width: 1000px;
   margin: 0 auto;
-  padding: 0 1em;
+  padding: 20px;
 }
 
 a {
@@ -39,38 +38,40 @@ a {
 p {
   color: #555555;
 }
-
 li {
   list-style: none;
 }
-
+h1,
+h2 {
+  font-size: 240%;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: -0.04em;
+}
+h2 {
+  font-size: 24px;
+}
 input,
 select {
   border: none;
   background: none;
   outline: none;
 }
-
 select,
 .link-btn {
   cursor: pointer;
 }
-
-.bg-color {
+.quickMenu,
+.section02 {
   background-color: #e4faf4;
 }
 
-h1,
-.underline {
-  font-family: 'Josefin Sans', sans-serif;
-}
 /*           퀵메뉴          */
 #quick-menu {
   height: 30px;
-  line-height: 30px;
   font-size: 13px;
   color: #222222;
   text-align: right;
+  padding-top: 5px;
 }
 
 #quick-menu span {
@@ -104,13 +105,11 @@ form {
   font-size: 13px;
   color: #555555;
 }
-
 .header-right,
 nav > ul {
   display: flex;
   align-items: center;
 }
-
 nav > ul > li {
   padding-left: 20px;
   font-size: 14px;
@@ -136,12 +135,14 @@ nav > ul > li {
   margin: 1.2em 0;
 }
 .underline {
+  font-family: 'Josefin Sans', sans-serif;
   box-shadow: inset 0 -12px #b1f0e0;
 }
 .link-btn {
+  height: 52px;
   border: 0;
   padding: 10px 40px;
-  font-family: 'roboto';
+  font-family: 'roboto', sans-serif;
   font-size: 18px;
   text-align: center;
   color: #fff;
@@ -162,6 +163,10 @@ nav > ul > li {
   border-style: none;
 } */
 
+.img-slide > img {
+  box-shadow: -15px 15px #e8f9f5;
+}
+
 /*            섹션02            */
 #section02 {
   height: 190px;
@@ -171,6 +176,9 @@ nav > ul > li {
 }
 #section02-txt {
   width: 500px;
+}
+#section02-txt > h1 {
+  font-size: 200%;
 }
 #section02-txt > p {
   position: relative;
@@ -183,14 +191,14 @@ nav > ul > li {
 }
 .partners li {
   list-style: none;
-  width: 110px;
-  height: 110px;
   margin-left: 3em;
+  /*  width: 110px;
+  height: 110px;  
   padding: 1em;
   border: #cdf6eb 1px solid;
   border-radius: 4px;
-  font-size: 14px;
-  color: #555555;
+  font-size: 12px;
+  color: #555555;*/
 }
 
 /*            섹션03            */
@@ -202,16 +210,30 @@ nav > ul > li {
 }
 #section03-txt {
   width: 500px;
-  line-height: 2em;
+  height: 450px;
+  /* line-height: 2em; */
+}
+#section03-txt h1 {
+  position: relative;
+  top: 10px;
+}
+#section03-list {
+  position: relative;
+  top: 40px;
+  line-height: 2.5em;
 }
 #section03-list li {
-  list-style-image: url('img/section03_check.svg');
+  list-style-image: url('./img/section03_check.svg');
+  list-style-position: inside;
   color: #555555;
 }
-
+#section03-txt button {
+  position: relative;
+  top: 60px;
+}
 /*            섹션04             */
 .section04 {
-  background: linear-gradient(#e4faf4, #fff);
+  background: linear-gradient(#e4faf4, #fff 60%);
 }
 #section04 {
   height: 850px;
@@ -220,34 +242,51 @@ nav > ul > li {
   align-items: center;
 }
 #section04-txt {
-  width: 570px;
+  /* padding-bottom: 5em; */
+  width: 500px;
   line-height: 2em;
 }
+
 #section04-subtxt {
-  height: 300px;
+  position: relative;
+  top: 50px;
   display: flex;
   justify-content: space-between;
 }
-
 #section04-subtxt div {
+  height: 380px;
   width: 250px;
 }
-
-#section04-subtxt > .link-btn {
-  vertical-align: text-bottom;
+#section04-subtxt button {
+  position: relative;
+  top: 50px;
+}
+#section04 > img {
+  box-shadow: 15px 15px #e8f9f5;
 }
 
 /*            섹션05            */
-
+.section05 {
+  background-image: url(./img/section05_bg.png);
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
 #section05 {
+  width: 100%;
   height: 300px;
   text-align: center;
-  line-height: 4em;
 }
-
-footer {
+#section05 > p {
+  line-height: 2em;
+}
+#download-app {
+  position: relative;
+  top: 40px;
+  line-height: 3em;
+}
+/* footer {
   border-top: 1px solid #e8e8e8;
-}
+} */
 #footer {
   height: 42px;
   display: flex;
@@ -263,6 +302,136 @@ footer {
   padding-left: 20px;
 }
 
-#hamberger-btn {
-  visibility: hidden;
+.nav-toggle-btn {
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  display: none;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    width: 375px;
+  }
+  .wrap {
+    width: 100%;
+    max-width: 400px;
+    min-width: 320px;
+  }
+
+  #section01 img,
+  #section04 img {
+    display: none;
+  }
+  #section01-txt {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  #section02 {
+    height: 400px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  #section02-txt {
+    width: 100%;
+    font-size: 15px;
+  }
+  .partners {
+    /* width: 50%; */
+    justify-content: space-between;
+  }
+
+  .partners li {
+    margin-left: 0.1em;
+    /* font-size: 14px; */
+  }
+
+  #section03 {
+    height: 930px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+  #section03 img {
+    width: 335px;
+  }
+
+  #section04 {
+    height: 940px;
+  }
+  #section04-subtxt {
+    flex-direction: column;
+  }
+
+  #section05 {
+    height: 450px;
+    text-align: center;
+  }
+  #section05 > h1 {
+    line-height: 1.2em;
+  }
+
+  .quickMenu {
+    display: none;
+  }
+
+  #header {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #footer {
+    height: 100px;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+
+  .logo svg {
+    width: 80%;
+  }
+
+  form {
+    position: relative;
+    top: 20px;
+    width: 330px;
+  }
+  .header-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-toggle-btn {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    /* top: 60px; */
+    /* z-index: 1; 
+    width: 100%;
+    height: 50%;
+    background-color: white;*/
+  }
+
+  nav > ul {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+  /*
+  nav > ul > li {
+    width: 100%;
+    line-height: 5em;
+    border-bottom: solid #999 1px;
+    text-align: center;
+  } */
+
+  /*
+  nav.active{
+    display: flex;
+  } */
 }
