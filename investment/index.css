@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Roboto:wght@300&display=swap');
 
 :root {
-  margin: 0;
-  padding: 0;
   --bg-color: #e4faf4;
   --h1-color: #222222;
   --text-color: #555555;
@@ -20,12 +18,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow-wrap: break-word;
   font-family: 'Roboto', sans-serif;
 }
 
 .wrap {
   max-width: 1160px;
-  min-width: 1000px;
+  min-width: 1024px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -41,14 +40,17 @@ p {
 li {
   list-style: none;
 }
-h1,
-h2 {
-  font-size: 240%;
+
+h1 {
+  font-size: 40px;
   font-family: 'Josefin Sans', sans-serif;
   letter-spacing: -0.04em;
 }
+
 h2 {
   font-size: 24px;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: -0.04em;
 }
 input,
 select {
@@ -92,7 +94,6 @@ select,
 form {
   display: flex;
   align-items: center;
-  width: 220px;
   height: 42px;
   padding: 10px 15px;
   background-color: #f5f5f5;
@@ -101,16 +102,16 @@ form {
 .search-input-field {
   margin-left: 5px;
   padding-left: 5px;
-  width: 160px;
+  width: 180px;
   font-size: 13px;
   color: #555555;
 }
 .header-right,
-nav > ul {
+.nav > ul {
   display: flex;
   align-items: center;
 }
-nav > ul > li {
+.nav > ul > li {
   padding-left: 20px;
   font-size: 14px;
 }
@@ -124,7 +125,7 @@ nav > ul > li {
   align-items: center;
 }
 #section01-txt {
-  width: 455px;
+  width: 450px;
   padding-bottom: 40px;
   line-height: 2em;
   font-size: 17px;
@@ -149,19 +150,10 @@ nav > ul > li {
   border-radius: 4px;
   background-color: #00d09c;
 }
-/* .link-btn:visited {
-  border: 0;
-  border-style: none;
-} */
-
 .link-btn:hover {
   border: 0;
   background-color: #1bc79c;
 }
-
-/* .link-btn:active {
-  border-style: none;
-} */
 
 .img-slide > img {
   box-shadow: -15px 15px #e8f9f5;
@@ -192,13 +184,6 @@ nav > ul > li {
 .partners li {
   list-style: none;
   margin-left: 3em;
-  /*  width: 110px;
-  height: 110px;  
-  padding: 1em;
-  border: #cdf6eb 1px solid;
-  border-radius: 4px;
-  font-size: 12px;
-  color: #555555;*/
 }
 
 /*            섹션03            */
@@ -209,9 +194,8 @@ nav > ul > li {
   align-items: center;
 }
 #section03-txt {
-  width: 500px;
+  width: 360px;
   height: 450px;
-  /* line-height: 2em; */
 }
 #section03-txt h1 {
   position: relative;
@@ -231,6 +215,7 @@ nav > ul > li {
   position: relative;
   top: 60px;
 }
+
 /*            섹션04             */
 .section04 {
   background: linear-gradient(#e4faf4, #fff 60%);
@@ -242,8 +227,6 @@ nav > ul > li {
   align-items: center;
 }
 #section04-txt {
-  /* padding-bottom: 5em; */
-  width: 500px;
   line-height: 2em;
 }
 
@@ -270,23 +253,25 @@ nav > ul > li {
   background-image: url(./img/section05_bg.png);
   background-repeat: repeat-x;
   background-position: bottom;
+  height: 450px;
 }
 #section05 {
   width: 100%;
-  height: 300px;
+  position: relative;
+  top: 30px;
   text-align: center;
 }
 #section05 > p {
-  line-height: 2em;
+  width: 380px;
+  line-height: 1.5em;
+  margin: 15px auto;
 }
 #download-app {
   position: relative;
-  top: 40px;
-  line-height: 3em;
+  top: 10px;
+  line-height: 5em;
 }
-/* footer {
-  border-top: 1px solid #e8e8e8;
-} */
+
 #footer {
   height: 42px;
   display: flex;
@@ -305,26 +290,30 @@ nav > ul > li {
 .nav-toggle-btn {
   position: absolute;
   top: 25px;
-  right: 10px;
+  right: 20px;
   display: none;
 }
 
 @media screen and (max-width: 375px) {
-  body {
-    width: 375px;
+  h1 {
+    font-size: 32px;
   }
+
   .wrap {
-    width: 100%;
-    max-width: 400px;
-    min-width: 320px;
+    max-width: 100%;
+    min-width: 375px;
   }
 
   #section01 img,
   #section04 img {
     display: none;
   }
+
+  #section01 {
+    height: 470px;
+  }
+
   #section01-txt {
-    width: 100%;
     font-size: 15px;
   }
 
@@ -339,13 +328,12 @@ nav > ul > li {
     font-size: 15px;
   }
   .partners {
-    /* width: 50%; */
+    width: 20%;
     justify-content: space-between;
   }
 
   .partners li {
     margin-left: 0.1em;
-    /* font-size: 14px; */
   }
 
   #section03 {
@@ -355,11 +343,15 @@ nav > ul > li {
     justify-content: space-around;
   }
   #section03 img {
-    width: 335px;
+    max-width: 100%;
+  }
+
+  #section03-txt {
+    width: 320px;
   }
 
   #section04 {
-    height: 940px;
+    height: 1000px;
   }
   #section04-subtxt {
     flex-direction: column;
@@ -371,6 +363,9 @@ nav > ul > li {
   }
   #section05 > h1 {
     line-height: 1.2em;
+  }
+  #section05 > p {
+    max-width: 300px;
   }
 
   .quickMenu {
@@ -396,8 +391,12 @@ nav > ul > li {
   form {
     position: relative;
     top: 20px;
-    width: 330px;
   }
+
+  .search-input-field {
+    width: 75vw;
+  }
+
   .header-right {
     flex-direction: column;
     align-items: center;
@@ -407,31 +406,30 @@ nav > ul > li {
     display: block;
   }
 
-  nav {
+  .nav {
     display: none;
-    /* top: 60px; */
-    /* z-index: 1; 
-    width: 100%;
-    height: 50%;
-    background-color: white;*/
   }
 
-  nav > ul {
+  .nav > ul {
     width: 100%;
     flex-direction: column;
     align-items: center;
-    padding-left: 0;
   }
-  /*
-  nav > ul > li {
+
+  .nav > ul > li {
     width: 100%;
     line-height: 5em;
-    border-bottom: solid #999 1px;
+    border-top: solid #ccc 1px;
     text-align: center;
-  } */
+  }
 
-  /*
-  nav.active{
-    display: flex;
-  } */
+  .nav.active {
+    display: block;
+    position: absolute;
+    top: 70px;
+    z-index: 1;
+    width: 100%;
+    background-color: white;
+    box-shadow: #ddd 0px 10px 10px;
+  }
 }
